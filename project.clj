@@ -33,11 +33,9 @@
                      ["clean"]
                      ["garden" "once"]
                      ["cljsbuild" "once" "production"]]
-            "dev"   ["do"
-                     ["clean"]
-                     ["pdo"
-                      ["garden" "auto"]
-                      ["re-frisk"]]]
+            "dev"   ["pdo"
+                     ["garden" "auto"]
+                     ["re-frisk"]]
             }
 
   ;; clean generated files

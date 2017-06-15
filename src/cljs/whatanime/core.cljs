@@ -1,5 +1,5 @@
 (ns whatanime.core
-  (:require [reagent.core :refer [render-component force-update-all]]
+  (:require [reagent.core :refer [render-component]]
             [re-frame.core :refer [dispatch-sync clear-subscription-cache!]]
             [re-frisk-remote.core :refer [enable-re-frisk-remote!]]
             [akiroz.re-frame.whatanime :as whatanime]
@@ -15,7 +15,9 @@
 
 (defn fig-reload []
   (clear-subscription-cache!)
-  (force-update-all))
+  (render-component
+    [main.views/app]
+    (.getElementById js/document "app")))
 
 (defn ^:export main []
   ;; setup re-frisk
