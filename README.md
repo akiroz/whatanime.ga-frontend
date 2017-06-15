@@ -2,5 +2,5 @@
 
 ### Development
 
-- `lein dev` start garden auto build & re-frisk server
-- `lein figwheel` start figwheel dev server
+1. `lein figwheel` start figwheel dev server
+2. `lein dev` start garden auto build & re-frisk server
