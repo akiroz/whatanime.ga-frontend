@@ -9,6 +9,7 @@
             ;; all view namespaces must be explicitly required
             [whatanime.components.home.views]
             [whatanime.components.image-search.views]
+            [whatanime.components.server-status.views]
             [whatanime.components.changelog.views]
             [whatanime.components.faq.views]
             [whatanime.components.legal.views]

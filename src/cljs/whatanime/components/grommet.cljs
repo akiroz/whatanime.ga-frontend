@@ -60,6 +60,7 @@
   Table
   TableHeader
   Tiles
+  Tile
 
   ;; Visualization
   ChartArea

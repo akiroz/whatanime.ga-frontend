@@ -4,5 +4,4 @@
 (reg-sub
   ::current-panel
   (fn [db _]
-    :image-search
-    #_(get-in db [:storage :current-panel])))
+    (get-in db [:storage :current-panel])))
