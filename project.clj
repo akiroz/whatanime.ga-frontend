@@ -5,19 +5,18 @@
   :min-lein-version "2.6.1"
   :plugins [[lein-figwheel "0.5.10"]
             [lein-cljsbuild "1.1.6"]
-            [lein-re-frisk "0.4.5"]
-            [lein-garden "0.3.0"]
-            [lein-pdo "0.1.1"]]
+            [lein-garden "0.3.0"]]
 
   :dependencies [;; language core
                  [org.clojure/clojure "1.9.0-alpha17"]
-                 [org.clojure/clojurescript "1.9.562"]
+                 [org.clojure/clojurescript "1.9.521"]
                  ;; utilities
                  [binaryage/devtools "0.9.4"]
-                 [re-frisk-remote "0.4.2"]
+                 [re-frisk "0.4.5"]
                  ;; framework
                  [reagent "0.6.2"]
                  [re-frame "0.9.4"]
+                 [akiroz.re-frame/storage "0.1.1"]
                  [akiroz.re-frame/whatanime "0.1.0-SNAPSHOT"]
                  [cljsjs/grommet "1.3.4-0"]
                  ]
@@ -33,9 +32,6 @@
                      ["clean"]
                      ["garden" "once"]
                      ["cljsbuild" "once" "production"]]
-            "dev"   ["pdo"
-                     ["garden" "auto"]
-                     ["re-frisk"]]
             }
 
   ;; clean generated files
