@@ -19,3 +19,5 @@ resources/public/index.js
 resources/public/index.css
 
 *.log
+
+/node_modules/

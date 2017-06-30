@@ -7,4 +7,4 @@
             ))
 
 (defmethod router.views/content :server-status [_]
-  [:p "hello"])
+  [g/Heading "Server Status"])

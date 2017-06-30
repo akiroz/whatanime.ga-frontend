@@ -7,4 +7,4 @@
             ))
 
 (defmethod router.views/content :image-search [_]
-  [g/Heading "Lorem Ipsum"])
+  [g/Heading "Image Search"])
