@@ -12,15 +12,16 @@
   ;; Structure
   App
   Article
-  Card
   Footer
   Header
   Section
   Sidebar
+  Value
 
   ;; Text
   Heading
   Headline
+  Label
   Markdown
   Paragraph
   Title
@@ -34,8 +35,11 @@
   Tiles
   Tile
 
-  ;; Misc
+  ;; Icons
   SVGIcon
+
+  ;; Visualization
+  Meter
   )
 
 (def-icons

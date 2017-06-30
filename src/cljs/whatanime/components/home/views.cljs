@@ -38,14 +38,16 @@
      [g/Headline {:size   :large
                   :strong true}
       "WAIT"]
-     [g/Headline {:strong true}
+     [g/Headline {:strong true
+                  :align  :center}
       "What Anime Is This?"]
      [g/Paragraph {:align :center}
       "Life is too short to answer all the \"what anime is this?\" questions."[:br]
       "Let computers do that for you."]]
     [g/Box {:direction  :row
             :align      :center
-            :pad        :large}
+            :pad        :large
+            :responsive false}
      [g/Anchor {:href   "https://www.facebook.com/whatanime.ga/"
                 :target :_blank
                 :icon   (as-element [g/SocialFacebookIcon])}]
@@ -82,62 +84,71 @@
     [g/Tiles {:justify  :center
               :margin   {:vertical :large}}
      [g/Tile
-      [g/Card {:align         :center
-               :margin        {:top :medium}
-               :heading       "Web App"
-               :headingStrong false
-               :description   "Search anime screenshots from your browser."
-               :thumbnail     (as-element [g/DesktopIcon {:size :large}])
-               :link
-               (as-element
-                 [g/Button
-                  {:label "Try it out!"
-                   :onClick #(dispatch [::router.events/to-route :image-search])}])}]]
+      [g/Box {:size   :medium
+              :align  :center
+              :margin :medium}
+       [g/Box {:margin {:bottom :medium}}
+        [g/DesktopIcon {:size :large}]]
+       [g/Heading {:tag :h2}
+        "Web App"]
+       [g/Paragraph {:size    :large
+                     :margin  :small}
+        "Search anime screenshots from your browser."]
+       [g/Button
+        {:label "Try it out!"
+         :onClick #(dispatch [::router.events/to-route :image-search])}]]]
      [g/Tile
-      [g/Card {:align         :center
-               :margin        {:top :medium}
-               :heading       "Browser Plugin"
-               :headingStrong false
-               :description   "Instantly lookup any anime screenshots online."
-               :thumbnail     (as-element [g/ActionIcon {:size :large}])
-               :link
-               (as-element
-                 [g/Box {:direction :row
-                         :justify   :center}
-                  [g/Anchor {:href   "https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp"
-                             :target :_blank
-                             :icon   (as-element [g/PlatformChromeIcon {:size :medium}])}]
-                  [g/Anchor {:href   "https://addons.mozilla.org/en-US/firefox/addon/search-anime-by-screenshot/"
-                             :target :_blank
-                             :icon   (as-element [g/PlatformFirefoxIcon {:size :medium}])}]
-                  [g/Anchor {:href   "https://addons.opera.com/en/extensions/details/search-anime-by-screenshot/"
-                             :target :_blank
-                             :icon   (as-element [g/PlatformOperaIcon {:size :medium}])}]])}]]
+      [g/Box {:size   :medium
+              :align  :center
+              :margin :medium}
+       [g/Box {:margin {:bottom :medium}}
+        [g/ActionIcon {:size :large}]]
+       [g/Heading {:tag :h2}
+        "Browser Plugin"]
+       [g/Paragraph {:size    :large
+                     :margin  :small}
+        "Instantly lookup any anime screenshots online."]
+       [g/Box {:direction   :row
+               :justify     :center
+               :responsive  false}
+        [g/Anchor {:href   "https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp"
+                   :target :_blank
+                   :icon   (as-element [g/PlatformChromeIcon {:size :medium}])}]
+        [g/Anchor {:href   "https://addons.mozilla.org/en-US/firefox/addon/search-anime-by-screenshot/"
+                   :target :_blank
+                   :icon   (as-element [g/PlatformFirefoxIcon {:size :medium}])}]
+        [g/Anchor {:href   "https://addons.opera.com/en/extensions/details/search-anime-by-screenshot/"
+                   :target :_blank
+                   :icon   (as-element [g/PlatformOperaIcon {:size :medium}])}]]]]
      [g/Tile
-      [g/Card {:align         :center
-               :margin        {:top :medium}
-               :heading       "Telegram Bot"
-               :headingStrong false
-               :description   "Share and discover anime with your friends."
-               :thumbnail     (as-element [g/ChatIcon {:size :large}])
-               :link
-               (as-element
-                 [g/Button {:label  "@WhatAnimeBot"
-                            :target :_blank
-                            :href   "https://telegram.me/WhatAnimeBot"}])}]]
+      [g/Box {:size   :medium
+              :align  :center
+              :margin :medium}
+       [g/Box {:margin {:bottom :medium}}
+        [g/ChatIcon {:size :large}]]
+       [g/Heading {:tag :h2}
+        "Telegram Bot"]
+       [g/Paragraph {:size    :large
+                     :margin  :small}
+        "Share and discover anime with your friends."]
+       [g/Button {:label  "@WhatAnimeBot"
+                  :target :_blank
+                  :href   "https://telegram.me/WhatAnimeBot"}]]]
      [g/Tile
-      [g/Card {:align         :center
-               :margin        {:top :medium}
-               :heading       "HTTP API"
-               :headingStrong false
-               :description   "Develop your own application that requires anime search."
-               :thumbnail     (as-element [g/CodeIcon {:size :large}])
-               :link
-               (as-element
-                 [g/Button
-                  {:label   "Read the Docs"
-                   :target  :_blank
-                   :href    "https://soruly.github.io/whatanime.ga"}])}]]
+      [g/Box {:size   :medium
+              :align  :center
+              :margin :medium}
+       [g/Box {:margin {:bottom :medium}}
+        [g/CodeIcon {:size :large}]]
+       [g/Heading {:tag :h2}
+        "HTTP API"]
+       [g/Paragraph {:size    :large
+                     :margin  :small}
+        "Develop your own application that requires anime search."]
+       [g/Button
+        {:label   "Read the Docs"
+         :target  :_blank
+         :href    "https://soruly.github.io/whatanime.ga"}]]]
      ]]
 
    [g/Section {:direction   :column
