@@ -12,14 +12,17 @@
                  [org.clojure/clojurescript "1.9.671"]
                  ;; utilities
                  [binaryage/devtools "0.9.4"]
-                 [re-frisk "0.4.5"]
                  [binaryage/oops "0.5.5"]
+                 [re-frisk "0.4.5"]
                  ;; framework
                  [reagent "0.7.0"]
                  [re-frame "0.9.4"]
                  ;[cljsjs/grommet "1.3.4-0"]
                  [akiroz.re-frame/storage "0.1.2"]
                  [akiroz.re-frame/whatanime "0.1.0-SNAPSHOT"]
+                 ;; routing
+                 [kibu/pushy "0.3.7"]
+                 [bidi "2.1.1"]
                  ]
 
   :profiles

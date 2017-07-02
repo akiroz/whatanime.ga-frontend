@@ -4,4 +4,4 @@
 (reg-sub
   ::current-panel
   (fn [db _]
-    (get-in db [:storage :current-panel])))
+    (get-in db [:router :current-panel])))

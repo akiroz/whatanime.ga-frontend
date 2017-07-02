@@ -27,6 +27,7 @@
 
 (defn fig-reload []
   (clear-subscription-cache!)
+  (router.events/start-router!)
   (render-app))
 
 (defn main []
@@ -38,7 +39,7 @@
   (whatanime/reg-fx! {:token whatanime-api-token})
 
   ;; initialize app
-  (dispatch-sync [::router.events/initialize])
+  (router.events/start-router!)
   (dispatch-sync [::sidebar.events/initialize])
   (render-app))
 
